@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://awjouh.com/sitemap.xml

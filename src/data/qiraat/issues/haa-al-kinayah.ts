@@ -1,0 +1,151 @@
+import { QiraatIssue } from "../types.js";
+
+export const haaAlKinayahIssues: QiraatIssue[] = [
+  {
+    id: "haa-kinayah-hisham-six-words",
+    titleAr: "هاء الكناية لهشام في الكلمات الست المخصوصة",
+    chapterId: "haa-al-kinayah",
+    readerId: "ibn-amir",
+    narratorId: "hisham",
+    pathId: "hisham-al-hulwani",
+    scope: "path",
+    evidenceLevel: "explicit_author_statement",
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-sukun", labelAr: "إسكان الهاء", performanceType: "sukun" },
+      { id: "face-qasr-sila", labelAr: "الصلة أو القصر بحسب الموضع والطريق", performanceType: "short_vowel" }
+    ],
+    preferredFaceId: "face-sukun",
+    preferenceStatus: "preferred",
+    simpleExplanationAr: "هشام في الكلمات الست (يؤده، نؤته، نوله، نصله، فألقه، يتقه) الوجه المقدم عنه هو إسكان الهاء.",
+    detailedExplanationAr: "قاعدة هشام في هذه المواضع الستة إسكان الهاء وهو المقدم عنه أداءً، مع وجود الخلاف الثابت في طرقه.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "haa-kinayah-yatehi-qalun",
+    titleAr: "هاء الكناية لقالون في (يأته مؤمناً)",
+    chapterId: "haa-al-kinayah",
+    readerId: "nafi",
+    narratorId: "qalun",
+    pathId: "abi-nashit-an-qalun",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 20,
+    surahNameAr: "طه",
+    ayahNumbers: [75],
+    quranText: "وَمَن يَأْتِهِ مُؤْمِنًا",
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-sila", labelAr: "الصلة", performanceType: "sila" },
+      { id: "face-qasr", labelAr: "القصر (عدم الصلة مع كسر الهاء)", performanceType: "short_vowel" }
+    ],
+    preferredFaceId: "face-sila",
+    preferenceStatus: "preferred",
+    simpleExplanationAr: "قالون في (يأته مؤمناً) بطه له القصر والصلة، والمقدم عند الشيخ النحاس هو الصلة.",
+    disagreementAr: "نص الشيخ النحاس على أن بعض أهل الأداء يقدمون القصر لقالون في هذا الموضع، لكن اختياره هو الصلة.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "haa-kinayah-yatehi-hisham",
+    titleAr: "هاء الكناية لهشام في (يأته مؤمناً)",
+    chapterId: "haa-al-kinayah",
+    readerId: "ibn-amir",
+    narratorId: "hisham",
+    pathId: "hisham-al-hulwani",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 20,
+    surahNameAr: "طه",
+    ayahNumbers: [75],
+    quranText: "وَمَن يَأْتِهِ مُؤْمِنًا",
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-sila", labelAr: "الصلة", performanceType: "sila" },
+      { id: "face-sukun", labelAr: "الإسكان", performanceType: "sukun" }
+    ],
+    preferredFaceId: "face-sila",
+    preferenceStatus: "preferred",
+    simpleExplanationAr: "هشام في (يأته مؤمناً) بطه المقدم عنه الصلة حسب الطريق المحرر، بخلاف الكلمات الست التي مقدمها الإسكان.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "haa-kinayah-yardahu-hisham",
+    titleAr: "هاء الكناية لهشام في (يرضه لكم)",
+    chapterId: "haa-al-kinayah",
+    readerId: "ibn-amir",
+    narratorId: "hisham",
+    pathId: "hisham-al-hulwani",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 39,
+    surahNameAr: "الزمر",
+    ayahNumbers: [7],
+    quranText: "وَإِن تَشْكُرُوا يَرْضَهُ لَكُمْ",
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-sukun", labelAr: "إسكان الهاء", performanceType: "sukun" },
+      { id: "face-qasr", labelAr: "القصر (ضم الهاء بلا صلة)", performanceType: "short_vowel" }
+    ],
+    preferredFaceId: "face-sukun",
+    preferenceStatus: "preferred",
+    simpleExplanationAr: "هشام في (يرضه لكم) بالزمر الوجه المقدم عنه هو إسكان الهاء.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "haa-kinayah-yardahu-al-duri-abu-amr",
+    titleAr: "هاء الكناية للدوري عن أبي عمرو في (يرضه لكم)",
+    chapterId: "haa-al-kinayah",
+    readerId: "abu-amr",
+    narratorId: "al-duri-abu-amr",
+    pathId: "al-duri-abu-amr-shatibiyyah",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 39,
+    surahNameAr: "الزمر",
+    ayahNumbers: [7],
+    quranText: "وَإِن تَشْكُرُوا يَرْضَهُ لَكُمْ",
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-sila", labelAr: "الصلة", performanceType: "sila" },
+      { id: "face-sukun", labelAr: "الإسكان", performanceType: "sukun" }
+    ],
+    preferredFaceId: "face-sila",
+    preferenceStatus: "preferred",
+    simpleExplanationAr: "الدوري عن أبي عمرو في (يرضه لكم) بالزمر الوجه المقدم عنه هو الصلة.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "haa-kinayah-yatiqihi-ibn-jammaz",
+    titleAr: "هاء الكناية لابن جماز في (ويتقه)",
+    chapterId: "haa-al-kinayah",
+    readerId: "abu-jafar",
+    narratorId: "ibn-jammaz",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 24,
+    surahNameAr: "النور",
+    ayahNumbers: [52],
+    quranText: "وَيَخْشَ اللَّهَ وَيَتَّقْهِ",
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-sila", labelAr: "الصلة (مع كسر القاف)", performanceType: "sila" },
+      { id: "face-sukun", labelAr: "الإسكان", performanceType: "sukun" }
+    ],
+    preferredFaceId: "face-sila",
+    preferenceStatus: "preferred",
+    simpleExplanationAr: "ابن جماز في (ويتقه) بسورة النور الوجه المقدم عنه هو الصلة.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  }
+];

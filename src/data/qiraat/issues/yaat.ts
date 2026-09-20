@@ -1,0 +1,266 @@
+import { QiraatIssue } from "../types.js";
+
+export const yaatIssues: QiraatIssue[] = [
+  // --- ياءات الإضافة ---
+  {
+    id: "yaat-idhafa-mahyaya-warsh",
+    titleAr: "ياء الإضافة في (محياي) لورش",
+    chapterId: "yaat-al-idhafa",
+    readerId: "nafi",
+    narratorId: "warsh",
+    pathId: "al-azraq",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 6,
+    surahNameAr: "الأنعام",
+    ayahNumbers: [162],
+    quranText: "قُلْ إِنَّ صَلَاتِي وَنُسُكِي وَمَحْيَايَ وَمَمَاتِي لِلَّهِ رَبِّ الْعَالَمِينَ",
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-sukun", labelAr: "إسكان الياء مع المد المشبع", performanceType: "sukun" },
+      { id: "face-fath", labelAr: "فتح الياء", performanceType: "fath" }
+    ],
+    preferredFaceId: "face-sukun",
+    preferenceStatus: "preferred",
+    simpleExplanationAr: "ورش في (محياي) بالأنعام له الإسكان والفتح، والمقدم في الأداء عنه هو الإسكان.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "yaat-idhafa-indi-awalam",
+    titleAr: "ياء الإضافة في (عندي أولم) لابن كثير",
+    chapterId: "yaat-al-idhafa",
+    readerId: "ibn-kathir",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 28,
+    surahNameAr: "القصص",
+    ayahNumbers: [78],
+    quranText: "قَالَ إِنَّمَا أُوتِيتُهُ عَلَىٰ عِلْمٍ عِندِي ۚ أَوَلَمْ يَعْلَمْ",
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-fath-qunbul", labelAr: "فتح الياء لقنبل", performanceType: "fath" },
+      { id: "face-sukun-bazzi", labelAr: "إسكان الياء للبزي", performanceType: "sukun" }
+    ],
+    preferenceStatus: "disputed",
+    simpleExplanationAr: "في (عندي أولم) بالقصص: قنبل يفتح الياء، والبزي يسكنها.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "yaat-idhafa-liya-deeni-al-bazzi",
+    titleAr: "ياء الإضافة في (ولي دين) للبزي",
+    chapterId: "yaat-al-idhafa",
+    readerId: "ibn-kathir",
+    narratorId: "al-bazzi",
+    pathId: "al-bazzi-shatibiyyah",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 109,
+    surahNameAr: "الكافرون",
+    ayahNumbers: [6],
+    quranText: "لَكُمْ دِينُكُمْ وَلِيَ دِينِ",
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-sukun", labelAr: "إسكان الياء وصلاً ووقفاً", performanceType: "sukun" },
+      { id: "face-fath", labelAr: "فتح الياء وصلاً", performanceType: "fath" }
+    ],
+    preferredFaceId: "face-sukun",
+    preferenceStatus: "preferred",
+    simpleExplanationAr: "البزي في (ولي دين) بسورة الكافرون الوجه المقدم عنه هو إسكان الياء.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+
+  // --- ياءات الزوائد ---
+  {
+    id: "yaat-zawaid-al-daai-daani-qalun",
+    titleAr: "ياءات الزوائد في (الداع / دعان) لقالون",
+    chapterId: "yaat-al-zawaid",
+    readerId: "nafi",
+    narratorId: "qalun",
+    pathId: "abi-nashit-an-qalun",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 2,
+    surahNameAr: "البقرة",
+    ayahNumbers: [186],
+    quranText: "أُجِيبُ دَعْوَةَ الدَّاعِ إِذَا دَعَانِ",
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-hadhf", labelAr: "الحذف وصلاً ووقفاً", performanceType: "hadhf" },
+      { id: "face-ithbat", labelAr: "الإثبات وصلاً", performanceType: "ithbat" }
+    ],
+    preferredFaceId: "face-hadhf",
+    preferenceStatus: "preferred",
+    simpleExplanationAr: "قالون في (الداع / دعان) بالبقرة الوجه المقدم عنه هو الحذف.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "yaat-zawaid-keedooni-hisham",
+    titleAr: "ياء الزائدة في (فكيدون) لهشام",
+    chapterId: "yaat-al-zawaid",
+    readerId: "ibn-amir",
+    narratorId: "hisham",
+    pathId: "hisham-al-hulwani",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 7,
+    surahNameAr: "الأعراف",
+    ayahNumbers: [195],
+    quranText: "ثُمَّ كِيدُونِ فَلَا تُنظِرُونِ",
+    ruleType: "base_rule",
+    validFaces: [
+      { id: "face-ithbat", labelAr: "إثبات الياء وصلاً ووقفاً", performanceType: "ithbat" }
+    ],
+    preferredFaceId: "face-ithbat",
+    preferenceStatus: "single",
+    simpleExplanationAr: "هشام في (فكيدون) بالأعراف مذهبه إثبات الياء وصلاً ووقفاً.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "yaat-zawaid-yunadi-ibn-kathir",
+    titleAr: "ياء الزائدة في (يوم يناد المناد) لابن كثير",
+    chapterId: "yaat-al-zawaid",
+    readerId: "ibn-kathir",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 50,
+    surahNameAr: "ق",
+    ayahNumbers: [41],
+    quranText: "وَاسْتَمِعْ يَوْمَ يُنَادِ الْمُنَادِ مِن مَّكَانٍ قَرِيبٍ",
+    ruleType: "base_rule",
+    validFaces: [
+      { id: "face-ithbat", labelAr: "إثبات الياء وصلاً ووقفاً", performanceType: "ithbat" }
+    ],
+    preferredFaceId: "face-ithbat",
+    preferenceStatus: "single",
+    simpleExplanationAr: "ابن كثير يثبت الياء في (المناد) وصلاً ووقفاً.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "yaat-zawaid-fala-tas-alni-ibn-dhakwan",
+    titleAr: "ياء الزائدة في (فلا تسألن) لابن ذكوان",
+    chapterId: "yaat-al-zawaid",
+    readerId: "ibn-amir",
+    narratorId: "ibn-dhakwan",
+    pathId: "ibn-dhakwan-al-akhfash",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 18,
+    surahNameAr: "الكهف",
+    ayahNumbers: [70],
+    quranText: "قَالَ فَإِنِ اتَّبَعْتَنِي فَلَا تَسْأَلْنِي عَن شَيْءٍ",
+    ruleType: "base_rule",
+    validFaces: [
+      { id: "face-ithbat", labelAr: "إثبات الياء وصلاً", performanceType: "ithbat" }
+    ],
+    preferredFaceId: "face-ithbat",
+    preferenceStatus: "single",
+    simpleExplanationAr: "ابن ذكوان يثبت الياء في (فلا تسألن) بالكهف.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "yaat-zawaid-fama-atani",
+    titleAr: "ياء الزائدة في (فما آتان) وقفاً",
+    chapterId: "yaat-al-zawaid",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 27,
+    surahNameAr: "النمل",
+    ayahNumbers: [36],
+    quranText: "فَمَا آتَانِيَ اللَّهُ خَيْرٌ مِّمَّا آتَاكُم",
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-ithbat-waqfan", labelAr: "إثبات الياء ساكنة وقفاً (لقالون وأبي عمرو وحفص)", performanceType: "ithbat" },
+      { id: "face-hadhf-waqfan", labelAr: "حذف الياء وقفاً", performanceType: "hadhf" }
+    ],
+    preferredFaceId: "face-ithbat-waqfan",
+    preferenceStatus: "preferred",
+    simpleExplanationAr: "في (فما آتان) بالنمل: قالون وأبو عمرو وحفص الوجه المقدم عندهم في الوقف هو إثبات الياء ساكنة.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "yaat-zawaid-al-talaq-al-tanad-qalun",
+    titleAr: "ياءات الزوائد في (التلاق / التناد) لقالون",
+    chapterId: "yaat-al-zawaid",
+    readerId: "nafi",
+    narratorId: "qalun",
+    pathId: "abi-nashit-an-qalun",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 40,
+    surahNameAr: "غافر",
+    ayahNumbers: [15, 32],
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-hadhf", labelAr: "الحذف وصلاً ووقفاً", performanceType: "hadhf" },
+      { id: "face-ithbat", labelAr: "الإثبات وصلاً", performanceType: "ithbat" }
+    ],
+    preferredFaceId: "face-hadhf",
+    preferenceStatus: "preferred",
+    simpleExplanationAr: "قالون في (التلاق / التناد) بغافر الوجه المقدم عنه هو الحذف.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "yaat-zawaid-akramani-ahanani-abu-amr",
+    titleAr: "ياءات الزوائد في (أكرمن / أهانن) لأبي عمرو",
+    chapterId: "yaat-al-zawaid",
+    readerId: "abu-amr",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 89,
+    surahNameAr: "الفجر",
+    ayahNumbers: [15, 16],
+    ruleType: "preferred_face",
+    validFaces: [
+      { id: "face-hadhf", labelAr: "الحذف وصلاً ووقفاً", performanceType: "hadhf" },
+      { id: "face-ithbat", labelAr: "الإثبات وصلاً", performanceType: "ithbat" }
+    ],
+    preferredFaceId: "face-hadhf",
+    preferenceStatus: "preferred",
+    simpleExplanationAr: "أبو عمرو في (أكرمن / أهانن) بالفجر الوجه المقدم عنه هو الحذف.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  },
+  {
+    id: "yaat-zawaid-bil-wadi-qunbul",
+    titleAr: "ياء الزائدة في (بالواد) لقنبل",
+    chapterId: "yaat-al-zawaid",
+    readerId: "ibn-kathir",
+    narratorId: "qunbul",
+    pathId: "qunbul-shatibiyyah",
+    scope: "ayah",
+    evidenceLevel: "explicit_author_statement",
+    surahNumber: 89,
+    surahNameAr: "الفجر",
+    ayahNumbers: [9],
+    quranText: "وَثَمُودَ الَّذِينَ جَابُوا الصَّخْرَ بِالْوَادِ",
+    ruleType: "base_rule",
+    validFaces: [
+      { id: "face-ithbat", labelAr: "إثبات الياء وصلاً ووقفاً", performanceType: "ithbat" }
+    ],
+    preferredFaceId: "face-ithbat",
+    preferenceStatus: "single",
+    simpleExplanationAr: "قنبل في (بالواد) بسورة الفجر يثبت الياء وصلاً ووقفاً.",
+    sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
+    difficulty: 2,
+    verificationStatus: "verified_primary"
+  }
+];
