@@ -230,7 +230,7 @@ export const QuizPage: React.FC = () => {
                   <option value="all">جميع الأبواب والفرش</option>
                   {chapters.map(c => (
                     <option key={c.id} value={c.id}>
-                      {c.nameAr}
+                      {c.titleAr}
                     </option>
                   ))}
                 </select>
@@ -397,7 +397,7 @@ export const QuizPage: React.FC = () => {
             )}
             {chapter && (
               <span className="px-2.5 py-1 rounded-md bg-amber-50 text-amber-800 border border-amber-200 font-medium">
-                {chapter.nameAr}
+                {chapter.titleAr}
               </span>
             )}
           </div>

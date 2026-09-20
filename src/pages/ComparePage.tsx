@@ -283,7 +283,7 @@ export const ComparePage: React.FC = () => {
               const c = chapters.find(ch => ch.id === cid);
               return (
                 <option key={cid} value={cid}>
-                  {c?.nameAr || cid}
+                  {c?.titleAr || cid}
                 </option>
               );
             })}
@@ -311,7 +311,7 @@ export const ComparePage: React.FC = () => {
                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-stone-100 pb-3">
                   <div className="flex items-center gap-2">
                     <span className="px-2.5 py-1 rounded-md bg-stone-100 text-stone-700 text-xs font-medium">
-                      {ch?.nameAr || "عام"}
+                      {ch?.titleAr || "عام"}
                     </span>
                     <h3 className="font-extrabold text-stone-900 text-base font-quran">
                       {row.title}
