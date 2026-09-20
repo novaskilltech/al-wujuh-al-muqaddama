@@ -9,7 +9,8 @@ export const narrators: Narrator[] = [
     nameAr: "قالون",
     nameFr: "Qalun",
     fullNameAr: "عيسى بن مينا المدني (قالون)",
-    deathYearHijri: 220
+    deathYearHijri: 220,
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "warsh",
@@ -18,7 +19,8 @@ export const narrators: Narrator[] = [
     nameAr: "ورش",
     nameFr: "Warsh",
     fullNameAr: "عثمان بن سعيد المصري (ورش)",
-    deathYearHijri: 197
+    deathYearHijri: 197,
+    biographyVerificationStatus: "traditional_unverified"
   },
 
   // 2. ابن كثير
@@ -29,7 +31,8 @@ export const narrators: Narrator[] = [
     nameAr: "البزي",
     nameFr: "Al-Bazzi",
     fullNameAr: "أحمد بن محمد بن عبد الله بن القاسم بن نافع بن أبي بزة",
-    deathYearHijri: 250
+    deathYearHijri: 250,
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "qunbul",
@@ -38,7 +41,8 @@ export const narrators: Narrator[] = [
     nameAr: "قنبل",
     nameFr: "Qunbul",
     fullNameAr: "محمد بن عبد الرحمن بن خالد المخزومي المكي",
-    deathYearHijri: 291
+    deathYearHijri: 291,
+    biographyVerificationStatus: "traditional_unverified"
   },
 
   // 3. أبو عمرو
@@ -49,7 +53,8 @@ export const narrators: Narrator[] = [
     nameAr: "الدوري عن أبي عمرو",
     nameFr: "Al-Duri ('an Abi 'Amr)",
     fullNameAr: "حفص بن عمر بن عبد العزيز الدوري الأزدي البغدادي",
-    deathYearHijri: 246
+    deathYearHijri: 246,
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "al-susi",
@@ -58,7 +63,8 @@ export const narrators: Narrator[] = [
     nameAr: "السوسي",
     nameFr: "Al-Susi",
     fullNameAr: "صالح بن زياد بن عبد الله السوسي الرقي",
-    deathYearHijri: 261
+    deathYearHijri: 261,
+    biographyVerificationStatus: "traditional_unverified"
   },
 
   // 4. ابن عامر
@@ -69,7 +75,8 @@ export const narrators: Narrator[] = [
     nameAr: "هشام",
     nameFr: "Hisham",
     fullNameAr: "هشام بن عمار بن نصير السلمي الدمشقي",
-    deathYearHijri: 245
+    deathYearHijri: 245,
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "ibn-dhakwan",
@@ -77,8 +84,9 @@ export const narrators: Narrator[] = [
     order: 2,
     nameAr: "ابن ذكوان",
     nameFr: "Ibn Dhakwan",
-    fullNameAr: "عبد الله بن أحمد بن بشير بن ذكوان القرشي الفهري الدمشقي",
-    deathYearHijri: 242
+    fullNameAr: "عبد الله بن أحمد بن بشير بن ذكوان القرشي الدمشقي",
+    deathYearHijri: 242,
+    biographyVerificationStatus: "traditional_unverified"
   },
 
   // 5. عاصم
@@ -89,7 +97,8 @@ export const narrators: Narrator[] = [
     nameAr: "شعبة",
     nameFr: "Shu'bah",
     fullNameAr: "شعبة بن عياش بن سالم الأسدي الكوفي",
-    deathYearHijri: 193
+    deathYearHijri: 193,
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "hafs",
@@ -98,7 +107,8 @@ export const narrators: Narrator[] = [
     nameAr: "حفص",
     nameFr: "Hafs",
     fullNameAr: "حفص بن سليمان بن المغيرة الأسدي الكوفي",
-    deathYearHijri: 180
+    deathYearHijri: 180,
+    biographyVerificationStatus: "traditional_unverified"
   },
 
   // 6. حمزة
@@ -108,8 +118,9 @@ export const narrators: Narrator[] = [
     order: 1,
     nameAr: "خلف عن حمزة",
     nameFr: "Khalaf ('an Hamzah)",
-    fullNameAr: "خلف بن هشام البزار (راوياً عن حمزة)",
-    deathYearHijri: 229
+    fullNameAr: "خلف بن هشام البزار البغدادي (راوي حمزة)",
+    deathYearHijri: 229,
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "khallad",
@@ -117,8 +128,9 @@ export const narrators: Narrator[] = [
     order: 2,
     nameAr: "خلاد",
     nameFr: "Khallad",
-    fullNameAr: "خلاد بن خالد الكوفي الشيباني الصيرفي",
-    deathYearHijri: 220
+    fullNameAr: "خلاد بن خالد الشيباني الكوفي",
+    deathYearHijri: 220,
+    biographyVerificationStatus: "traditional_unverified"
   },
 
   // 7. الكسائي
@@ -128,8 +140,9 @@ export const narrators: Narrator[] = [
     order: 1,
     nameAr: "أبو الحارث",
     nameFr: "Abul-Harith",
-    fullNameAr: "الليث بن خالد المروزي البغدادي",
-    deathYearHijri: 240
+    fullNameAr: "الليث بن خالد البغدادي (أبو الحارث)",
+    deathYearHijri: 240,
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "al-duri-al-kisai",
@@ -137,8 +150,9 @@ export const narrators: Narrator[] = [
     order: 2,
     nameAr: "الدوري عن الكسائي",
     nameFr: "Al-Duri ('an Al-Kisa'i)",
-    fullNameAr: "حفص بن عمر بن عبد العزيز الدوري (راوياً عن الكسائي)",
-    deathYearHijri: 246
+    fullNameAr: "حفص بن عمر بن عبد العزيز الدوري (راوي الكسائي أيضاً)",
+    deathYearHijri: 246,
+    biographyVerificationStatus: "traditional_unverified"
   },
 
   // 8. أبو جعفر
@@ -148,8 +162,9 @@ export const narrators: Narrator[] = [
     order: 1,
     nameAr: "ابن وردان",
     nameFr: "Ibn Wardan",
-    fullNameAr: "عيسى بن وردان المدني الحذاء",
-    deathYearHijri: 160
+    fullNameAr: "عيسى بن وردان المدني (الحذاء)",
+    deathYearHijri: 160,
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "ibn-jammaz",
@@ -158,7 +173,8 @@ export const narrators: Narrator[] = [
     nameAr: "ابن جماز",
     nameFr: "Ibn Jammaz",
     fullNameAr: "سليمان بن محمد بن مسلم بن جماز الزهري المدني",
-    deathYearHijri: 170
+    deathYearHijri: 170,
+    biographyVerificationStatus: "traditional_unverified"
   },
 
   // 9. يعقوب
@@ -169,7 +185,8 @@ export const narrators: Narrator[] = [
     nameAr: "رويس",
     nameFr: "Ruways",
     fullNameAr: "محمد بن المتوكل اللؤلؤي البصري (رويس)",
-    deathYearHijri: 238
+    deathYearHijri: 238,
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "rawh",
@@ -177,8 +194,9 @@ export const narrators: Narrator[] = [
     order: 2,
     nameAr: "روح",
     nameFr: "Rawh",
-    fullNameAr: "روح بن عبد المؤمن الهذلي البصري النحوي",
-    deathYearHijri: 234
+    fullNameAr: "روح بن عبد المؤمن الهذلي البصري",
+    deathYearHijri: 234,
+    biographyVerificationStatus: "traditional_unverified"
   },
 
   // 10. خلف العاشر
@@ -188,8 +206,9 @@ export const narrators: Narrator[] = [
     order: 1,
     nameAr: "إسحاق",
     nameFr: "Ishaq",
-    fullNameAr: "إسحاق بن إبراهيم بن عثمان الوراق المروزي البغدادي",
-    deathYearHijri: 286
+    fullNameAr: "إسحاق بن إبراهيم بن عثمان الوراق المروزي ثم البغدادي",
+    deathYearHijri: 286,
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "idris",
@@ -198,6 +217,7 @@ export const narrators: Narrator[] = [
     nameAr: "إدريس",
     nameFr: "Idris",
     fullNameAr: "إدريس بن عبد الكريم الحداد البغدادي",
-    deathYearHijri: 292
+    deathYearHijri: 292,
+    biographyVerificationStatus: "traditional_unverified"
   }
 ];

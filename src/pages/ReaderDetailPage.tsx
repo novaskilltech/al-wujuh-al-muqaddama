@@ -17,6 +17,12 @@ export const ReaderDetailPage: React.FC = () => {
   const readerNarrators = narrators.filter(n => n.readerId === readerId);
   const allReaderIssues = readerId ? getIssuesByReader(readerId) : [];
 
+  React.useEffect(() => {
+    if (reader) {
+      document.title = `قراءة الإمام ${reader.nameAr} | الأوجه المقدمة`;
+    }
+  }, [reader]);
+
   if (!reader) {
     return (
       <div className="text-center py-20">

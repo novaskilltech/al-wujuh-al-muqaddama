@@ -16,6 +16,12 @@ export const IssueDetailPage: React.FC = () => {
 
   const issue = issues.find(i => i.id === issueId);
 
+  React.useEffect(() => {
+    if (issue) {
+      document.title = `${issue.titleAr} | الأوجه المقدمة`;
+    }
+  }, [issue]);
+
   if (!issue) {
     return (
       <div className="text-center py-20">

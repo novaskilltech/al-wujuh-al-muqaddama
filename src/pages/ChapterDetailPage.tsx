@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Layers, Star, Filter, LayoutGrid, Table, ArrowLeft, ArrowRight, BookOpen } from "lucide-react";
+import { Layers, Star, Filter, LayoutGrid, Table, ArrowLeft, ArrowRight, BookOpen, Compass } from "lucide-react";
 import { chapters } from "../data/qiraat/chapters.js";
 import { readers } from "../data/qiraat/readers.js";
 import { narrators } from "../data/qiraat/narrators.js";
@@ -12,14 +12,20 @@ export const ChapterDetailPage: React.FC = () => {
   const { chapterId } = useParams<{ chapterId: string }>();
   const { dir } = useLanguage();
 
+  const chapter = chapters.find(c => c.id === chapterId);
+  const allIssues = chapterId ? getIssuesByChapter(chapterId) : [];
+
+  useEffect(() => {
+    if (chapter) {
+      document.title = `باب ${chapter.titleAr} | الأوجه المقدمة`;
+    }
+  }, [chapter]);
+
   const [selectedReader, setSelectedReader] = useState<string>("all");
   const [selectedNarrator, setSelectedNarrator] = useState<string>("all");
   const [selectedStatus, setSelectedStatus] = useState<string>("all");
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("all");
   const [viewMode, setViewMode] = useState<"cards" | "table">("cards");
-
-  const chapter = chapters.find(c => c.id === chapterId);
-  const allIssues = chapterId ? getIssuesByChapter(chapterId) : [];
 
   if (!chapter) {
     return (
@@ -53,14 +59,14 @@ export const ChapterDetailPage: React.FC = () => {
       </div>
 
       {/* Chapter Banner */}
-      <div className="bg-gradient-to-br from-[#f8f1e5] via-[#fdfcfb] to-white rounded-3xl p-6 sm:p-10 border border-[#ebdcc8] shadow-xs">
+      <div className="bg-gradient-to-br from-[#f8f1e5] via-[#fdfcfb] to-white rounded-3xl p-6 sm:p-10 border border-[#ebdcc8] shadow-xs space-y-6">
         <div className="max-w-4xl space-y-3">
           <div className="flex items-center gap-2">
             <span className="px-3 py-1 bg-amber-100 text-amber-900 text-xs font-bold rounded-full">
               الباب {chapter.order} • {chapter.category === "usul" ? "أصول" : "فرش"}
             </span>
             <span className="text-xs text-stone-500 font-medium">
-              {allIssues.length} مسألة محررة
+              {allIssues.length > 0 ? `${allIssues.length} مسألة محررة` : "قيد الاستكمال"}
             </span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-stone-900 font-quran">
@@ -70,7 +76,33 @@ export const ChapterDetailPage: React.FC = () => {
             {chapter.descriptionAr}
           </p>
         </div>
+
+        {/* ماذا ستتعلم في هذا الباب؟ */}
+        {chapter.whatYouWillLearnAr && (
+          <div className="bg-white/80 rounded-2xl p-5 border border-amber-200/60 shadow-2xs space-y-2">
+            <div className="flex items-center gap-2 text-amber-900 font-bold text-sm">
+              <Compass className="w-4 h-4 text-amber-700" />
+              <span>ماذا ستتعلم في هذا الباب؟</span>
+            </div>
+            <p className="text-sm text-stone-700 leading-relaxed font-naskh">
+              {chapter.whatYouWillLearnAr}
+            </p>
+          </div>
+        )}
       </div>
+
+      {allIssues.length === 0 ? (
+        <div className="text-center py-16 bg-white rounded-2xl border border-stone-200 p-8 space-y-3">
+          <span className="inline-block px-3 py-1 bg-amber-100 text-amber-900 text-xs font-bold rounded-full">
+            هذا الباب قيد الاستكمال
+          </span>
+          <h3 className="text-lg font-bold text-stone-800">هذا الباب قيد الاستكمال والتحرير العلمي</h3>
+          <p className="text-sm text-stone-600 max-w-md mx-auto">
+            المسائل التابعة لهذا الباب قيد الاستخراج والتحرير والمقابلة على الأصول المعتمدة في هذا المشروع.
+          </p>
+        </div>
+      ) : (
+        <>
 
       {/* Filter Bar */}
       <div className="bg-white rounded-2xl border border-stone-200 p-4 shadow-xs space-y-3">
@@ -253,6 +285,8 @@ export const ChapterDetailPage: React.FC = () => {
         <div className="text-center py-16 bg-white rounded-2xl border border-stone-200 text-stone-500">
           لا توجد مسائل مطابقة للفلاتر المحددة في هذا الباب.
         </div>
+      )}
+        </>
       )}
     </div>
   );

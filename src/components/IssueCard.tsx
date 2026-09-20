@@ -200,6 +200,63 @@ export const IssueCard: React.FC<IssueCardProps> = ({ issue, showChapterLink = t
           })}
         </div>
 
+        {/* Rawi Specific Preferences */}
+        {issue.rawiPreferences && issue.rawiPreferences.length > 0 && (
+          <div className="mt-3 p-3 bg-amber-50/50 rounded-xl border border-amber-200/70 space-y-2">
+            <div className="text-xs font-bold text-amber-900">
+              تفصيل التقديم بحسب الرواة:
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              {issue.rawiPreferences.map(rp => (
+                <div key={rp.narratorId} className="p-2 rounded-lg bg-white border border-amber-200/50 flex flex-col justify-between">
+                  <div className="font-semibold text-stone-900">{rp.narratorNameAr}</div>
+                  <div className="text-amber-900 font-medium mt-0.5">
+                    {rp.preferredFaceLabelAr ? `⭐ ${rp.preferredFaceLabelAr}` : "وجهان بلا ترجيح"}
+                  </div>
+                  {rp.notesAr && (
+                    <div className="text-[11px] text-stone-500 mt-1">{rp.notesAr}</div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Sub Rules Table (e.g. for Hisham's 6 words) */}
+        {issue.subRules && issue.subRules.length > 0 && (
+          <div className="mt-3 overflow-x-auto rounded-xl border border-stone-200">
+            <table className="w-full text-right text-xs bg-white">
+              <thead className="bg-[#f7f4ef] text-stone-800 font-bold border-b border-stone-200">
+                <tr>
+                  <th className="p-2">الكلمة</th>
+                  <th className="p-2">الموضع</th>
+                  <th className="p-2">الوجه المقدم</th>
+                  <th className="p-2">الأوجه الجائزة</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-stone-100">
+                {issue.subRules.map(sr => {
+                  const pref = sr.validFaces.find(f => f.id === sr.preferredFaceId);
+                  return (
+                    <tr key={sr.id} className="hover:bg-amber-50/30">
+                      <td className="p-2 font-quran font-bold text-stone-900 text-sm">« {sr.wordAr} »</td>
+                      <td className="p-2 text-stone-600">
+                        {sr.surahNameAr ? `سورة ${sr.surahNameAr}` : ""} {sr.ayahNumber ? `(${sr.ayahNumber})` : ""}
+                      </td>
+                      <td className="p-2 font-semibold text-amber-800">
+                        {pref ? `⭐ ${pref.labelAr}` : "—"}
+                      </td>
+                      <td className="p-2 text-stone-500">
+                        {sr.validFaces.map(f => f.labelAr).join(" • ")}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+
         {/* Simple Explanation */}
         <p className="text-sm text-stone-700 mt-3 leading-relaxed">
           {issue.simpleExplanationAr}

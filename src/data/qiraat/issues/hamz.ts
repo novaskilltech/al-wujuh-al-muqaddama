@@ -19,6 +19,9 @@ export const hamzIssues: QiraatIssue[] = [
     preferredFaceId: "face-ibdal",
     preferenceStatus: "preferred",
     simpleExplanationAr: "ورش في الهمزتين المفتوحتين من كلمة له الإبدال والتسهيل، والمقدم في الأداء عنه هو الإبدال.",
+    detailedExplanationAr: "روى الأزرق عن ورش في الهمزتين المفتوحتين من كلمة (ءأنذرتهم، ءأنتم) وجهين صحيحين: الإبدال ألفاً مع المد المشبع ست حركات للساكنين، وتسهيل الهمزة الثانية بين بين، واختار الشيخ النحاس تبعاً للداني والشاطبي تقديم الإبدال.",
+    preferenceReasonAr: "تقديم الإبدال لورش هو اختيار أبي عمرو الداني في التيسير والشاطبي في اللامية (وقل ألفاً عن أهل مصر تبدلت).",
+    memoryRuleAr: "ورش في المفتوحتين من كلمة يقدّم الإبدال المشبع على التسهيل.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     difficulty: 2,
     verificationStatus: "verified_primary"
@@ -40,6 +43,9 @@ export const hamzIssues: QiraatIssue[] = [
     preferredFaceId: "face-tashil-idkhal",
     preferenceStatus: "preferred",
     simpleExplanationAr: "هشام يسهل الهمزة الثانية مع الإدخال في المواضع التي ثبت ذلك فيها عنه.",
+    detailedExplanationAr: "روي عن هشام من طريق الحلواني التسهيل مع الإدخال والتحقيق مع الإدخال في المفتوحتين، والمقدم عنه في طريق التيسير والتحريرات هو التسهيل مع الإدخال.",
+    preferenceReasonAr: "تقديم التسهيل مع الإدخال لهشام هو مذهب الإمام الداني في التيسير.",
+    memoryRuleAr: "هشام يقدّم التسهيل مع الإدخال في الهمزتين من كلمة.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     difficulty: 2,
     verificationStatus: "verified_primary"
@@ -56,11 +62,14 @@ export const hamzIssues: QiraatIssue[] = [
     ruleType: "base_rule",
     validFaces: [
       { id: "face-tashil-bila-idkhal", labelAr: "التسهيل بلا إدخال", performanceType: "tashil" },
-      { id: "face-tahqiq", labelAr: "التحقيق", performanceType: "tahqiq" }
+      { id: "face-tahqiq", labelAr: "التحقيق بلا إدخال", performanceType: "tahqiq" }
     ],
     preferredFaceId: "face-tashil-bila-idkhal",
     preferenceStatus: "preferred",
     simpleExplanationAr: "في لفظ (أئمة) لهشام حكم خاص لا يعمم معه أصله في الإدخال، والمقدم عنه التسهيل بلا إدخال.",
+    detailedExplanationAr: "خرج لفظ (أئمة) لهشام عن قاعدته العامة في الإدخال لكراهة توالي همزتين وألف في كلمة واحدة ثقيلة، فرُوي عنه التسهيل والتحقيق كلاهما بلا إدخال، والمقدم أداءً هو التسهيل.",
+    preferenceReasonAr: "التسهيل بلا إدخال في (أئمة) هو الوجه المختار للداني والشاطبي لمن روى التسهيل لهشام.",
+    memoryRuleAr: "هشام في (أئمة) يسهل بلا إدخال تقديماً على التحقيق.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     difficulty: 2,
     verificationStatus: "verified_primary"
@@ -69,6 +78,7 @@ export const hamzIssues: QiraatIssue[] = [
     id: "hamzatani-kalimah-a-ush-hidu-qalun",
     titleAr: "الهمزتان من كلمة لقالون في (أأشهدوا) بالزخرف",
     chapterId: "hamzatani-min-kalimah",
+    chapterIds: ["farsh-al-huruf"],
     readerId: "nafi",
     narratorId: "qalun",
     pathId: "abi-nashit-an-qalun",
@@ -86,6 +96,9 @@ export const hamzIssues: QiraatIssue[] = [
     preferredFaceId: "face-idkhal",
     preferenceStatus: "preferred",
     simpleExplanationAr: "قالون في (أأشهدوا) بالزخرف الوجه المقدم عنه هو التسهيل مع الإدخال.",
+    detailedExplanationAr: "روي عن قالون في (أأشهدوا) بالزخرف تسهيل الهمزة المضمومة مع إدخال ألف بينهما، والتسهيل بلا إدخال، والمقدم عند الشيخ النحاس هو التسهيل مع الإدخال جرياً على قاعدته.",
+    preferenceReasonAr: "تقديم الإدخال لقالون هو الأصل المطرد في مذهبه في التيسير.",
+    memoryRuleAr: "قالون يقدّم الإدخال مع التسهيل في (أأشهدوا) بالزخرف.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     difficulty: 2,
     verificationStatus: "verified_primary"
@@ -103,9 +116,17 @@ export const hamzIssues: QiraatIssue[] = [
       { id: "face-ibdal-waw", labelAr: "إبدال الهمزة الثانية واواً مكسورة (المقدم لورش والبزي والدوري)", performanceType: "ibdal" },
       { id: "face-tashil-bayna", labelAr: "تسهيل الهمزة الثانية بين بين (المقدم لقالون وقنبل والسوسي)", performanceType: "tashil" }
     ],
+    rawiPreferences: [
+      { narratorId: "warsh", preferredFaceId: "face-ibdal-waw", notesAr: "المقدم لورش من طريق الأزرق هو الإبدال واواً." },
+      { narratorId: "al-bazzi", preferredFaceId: "face-ibdal-waw", notesAr: "المقدم للبزي هو الإبدال واواً." },
+      { narratorId: "al-duri-abu-amr", preferredFaceId: "face-ibdal-waw", notesAr: "المقدم للدوري عن أبي عمرو هو الإبدال واواً." },
+      { narratorId: "qalun", preferredFaceId: "face-tashil-bayna", notesAr: "المقدم لقالون هو تسهيل الهمزة الثانية بين بين." },
+      { narratorId: "qunbul", preferredFaceId: "face-tashil-bayna", notesAr: "المقدم لقنبل هو تسهيل الهمزة الثانية بين بين." },
+      { narratorId: "al-susi", preferredFaceId: "face-tashil-bayna", notesAr: "المقدم للسوسي هو تسهيل الهمزة الثانية بين بين." }
+    ],
     preferenceStatus: "disputed",
-    simpleExplanationAr: "في الهمزتين المختلفتين المضمومة فالمكسورة نحو (يشاء إلى): المقدم بالإبدال: ورش، البزي، الدوري عن أبي عمرو. والمقدم بالتسهيل: قالون، قنبل، السوسي.",
-    detailedExplanationAr: "ينقسم القراء في تقديم الأداء في نحو (يشاء إلى): فمنهم من يقدم الإبدال واواً (ورش، البزي، الدوري عن أبي عمرو)، ومنهم من يقدم التسهيل بين بين (قالون، قنبل، السوسي).",
+    simpleExplanationAr: "في الهمزتين المختلفتين المضمومة فالمكسورة نحو (يشاء إلى): المقدم بالإبدال واواً: ورش، البزي، الدوري عن أبي عمرو. والمقدم بالتسهيل: قالون، قنبل، السوسي.",
+    detailedExplanationAr: "ينقسم القراء في تقديم الأداء في نحو (يشاء إلى): فالإبدال واواً مكسورة هو المقدم لورش والبزي والدوري عن أبي عمرو، بينما التسهيل بين بين هو المقدم لقالون وقنبل والسوسي.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     difficulty: 3,
     verificationStatus: "verified_primary"
@@ -138,6 +159,7 @@ export const hamzIssues: QiraatIssue[] = [
     id: "hamz-mufrad-nabbi-na-ibn-wardan",
     titleAr: "الهمز المفرد في (نبئنا بتأويله) لابن وردان",
     chapterId: "hamz-mufrad",
+    chapterIds: ["farsh-al-huruf"],
     readerId: "abu-jafar",
     narratorId: "ibn-wardan",
     scope: "ayah",
@@ -162,6 +184,7 @@ export const hamzIssues: QiraatIssue[] = [
     id: "hamz-mufrad-nabbi-na-ibn-jammaz",
     titleAr: "الهمز المفرد في (نبئنا بتأويله) لابن جماز",
     chapterId: "hamz-mufrad",
+    chapterIds: ["farsh-al-huruf"],
     readerId: "abu-jafar",
     narratorId: "ibn-jammaz",
     scope: "ayah",
@@ -195,11 +218,11 @@ export const hamzIssues: QiraatIssue[] = [
     ruleType: "advanced_tahrir",
     validFaces: [
       { id: "face-sukun", labelAr: "الإسكان", performanceType: "sukun" },
-      { id: "face-ikhtilas", labelAr: "الاختلاس (روم الحركة)", performanceType: "short_vowel" },
+      { id: "face-ikhtilas", labelAr: "الاختلاس (الإتيان ببعض الحركة في الوصل مع تقليل زمنها)", performanceType: "short_vowel" },
       { id: "face-itmam", labelAr: "الإتمام", performanceType: "tahqiq" }
     ],
     preferenceStatus: "needs_primary_verification",
-    simpleExplanationAr: "مسألة (بارئكم) لأبي عمرو بروايتيه ورد فيها الخلاف بين الإسكان والاختلاس، وتعيين ما إذا كان الشيخ يقدم وجهاً بعينه موقوف على التحقق من الأصل الخطي لرسالة الشيخ النحاس.",
+    simpleExplanationAr: "مسألة (بارئكم) لأبي عمرو بروايتيه ورد فيها الخلاف بين الإسكان والاختلاس، وتعيين ما إذا كان الشيخ يقدم وجهاً بعينه موقوف على التحقق من الأصل المعتمد لرسالة الشيخ النحاس.",
     detailedExplanationAr: "وقع خلاف في نسبة الوجه المقدم لأبي عمرو في بارئكم ويأمركم بين الإسكان والاختلاس، لذلك عُلقت في التحقق الأولي ولا تظهر في الاختبارات.",
     sourceIds: ["an-nahhas-risala"],
     difficulty: 3,
@@ -276,6 +299,7 @@ export const hamzIssues: QiraatIssue[] = [
     id: "hamz-mufrad-la-a-natakum-al-bazzi",
     titleAr: "الهمز المفرد في (لأعنتكم) للبزي",
     chapterId: "hamz-mufrad",
+    chapterIds: ["farsh-al-huruf"],
     readerId: "ibn-kathir",
     narratorId: "al-bazzi",
     pathId: "al-bazzi-shatibiyyah",

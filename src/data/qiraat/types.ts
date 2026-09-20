@@ -72,6 +72,7 @@ export interface QiraatIssue {
   titleFr?: string;
 
   chapterId: string;
+  chapterIds?: string[];
 
   readerId?: string;
   narratorId?: string;
@@ -81,6 +82,7 @@ export interface QiraatIssue {
   evidenceLevel: EvidenceLevel;
 
   surahNumber?: number;
+  surahNumbers?: number[];
   surahNameAr?: string;
   ayahNumbers?: number[];
 
@@ -99,6 +101,19 @@ export interface QiraatIssue {
   preferenceReasonAr?: string;
   disagreementAr?: string;
   memoryRuleAr?: string;
+
+  subRules?: {
+    wordAr: string;
+    validFaces: Face[];
+    preferredFaceId?: string;
+    notesAr?: string;
+  }[];
+
+  rawiPreferences?: {
+    narratorId: string;
+    preferredFaceId: string;
+    notesAr?: string;
+  }[];
 
   poemVerseIds?: string[];
   risalaPages?: number[];
@@ -128,6 +143,7 @@ export interface Reader {
   fullNameAr?: string;
   deathYearHijri?: number;
   cityAr?: string;
+  biographyVerificationStatus?: "verified" | "traditional_unverified";
 }
 
 export interface Narrator {
@@ -138,6 +154,7 @@ export interface Narrator {
   nameFr?: string;
   fullNameAr?: string;
   deathYearHijri?: number;
+  biographyVerificationStatus?: "verified" | "traditional_unverified";
 }
 
 export interface Path {
@@ -156,6 +173,7 @@ export interface Chapter {
   titleFr?: string;
   category: "usul" | "farsh";
   descriptionAr?: string;
+  whatYouWillLearnAr?: string;
 }
 
 export interface PoemVerse {

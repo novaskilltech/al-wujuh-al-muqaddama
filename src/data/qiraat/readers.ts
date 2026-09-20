@@ -8,7 +8,8 @@ export const readers: Reader[] = [
     nameFr: "Nafi'",
     fullNameAr: "نافع بن عبد الرحمن بن أبي نعيم المدني",
     deathYearHijri: 169,
-    cityAr: "المدينة المنورة"
+    cityAr: "المدينة المنورة",
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "ibn-kathir",
@@ -17,7 +18,8 @@ export const readers: Reader[] = [
     nameFr: "Ibn Kathir",
     fullNameAr: "عبد الله بن كثير المكي",
     deathYearHijri: 120,
-    cityAr: "مكة المكرمة"
+    cityAr: "مكة المكرمة",
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "abu-amr",
@@ -26,7 +28,8 @@ export const readers: Reader[] = [
     nameFr: "Abu 'Amr",
     fullNameAr: "أبو عمرو بن العلاء البصري",
     deathYearHijri: 154,
-    cityAr: "البصرة"
+    cityAr: "البصرة",
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "ibn-amir",
@@ -35,7 +38,8 @@ export const readers: Reader[] = [
     nameFr: "Ibn 'Amir",
     fullNameAr: "عبد الله بن عامر الشامي اليحصبي",
     deathYearHijri: 118,
-    cityAr: "دمشق"
+    cityAr: "دمشق",
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "asim",
@@ -44,7 +48,8 @@ export const readers: Reader[] = [
     nameFr: "'Asim",
     fullNameAr: "عاصم بن أبي النجود الكوفي",
     deathYearHijri: 127,
-    cityAr: "الكوفة"
+    cityAr: "الكوفة",
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "hamza",
@@ -53,25 +58,28 @@ export const readers: Reader[] = [
     nameFr: "Hamzah",
     fullNameAr: "حمزة بن حبيب الزيات الكوفي",
     deathYearHijri: 156,
-    cityAr: "الكوفة"
+    cityAr: "الكوفة",
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "al-kisai",
     order: 7,
     nameAr: "الكسائي",
     nameFr: "Al-Kisa'i",
-    fullNameAr: "علي بن حمزة الكسائي النحوي الكوفي",
+    fullNameAr: "علي بن حمزة الكسائي الكوفي",
     deathYearHijri: 189,
-    cityAr: "الكوفة"
+    cityAr: "الكوفة / بغداد",
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "abu-jafar",
     order: 8,
     nameAr: "أبو جعفر",
     nameFr: "Abu Ja'far",
-    fullNameAr: "يزيد بن القعقاع المدني المخزومي",
+    fullNameAr: "يزيد بن القعقاع المدني (المخزومي بالولاء)",
     deathYearHijri: 130,
-    cityAr: "المدينة المنورة"
+    cityAr: "المدينة المنورة",
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "yaqub",
@@ -80,15 +88,17 @@ export const readers: Reader[] = [
     nameFr: "Ya'qub",
     fullNameAr: "يعقوب بن إسحاق الحضرمي البصري",
     deathYearHijri: 205,
-    cityAr: "البصرة"
+    cityAr: "البصرة",
+    biographyVerificationStatus: "traditional_unverified"
   },
   {
     id: "khalaf10",
     order: 10,
     nameAr: "خلف العاشر",
     nameFr: "Khalaf Al-'Ashir",
-    fullNameAr: "خلف بن هشام البزار البغدادي (العاشر في اختياره)",
+    fullNameAr: "خلف بن هشام البزار البغدادي (خلف العاشر في اختياره)",
     deathYearHijri: 229,
-    cityAr: "بغداد"
+    cityAr: "بغداد",
+    biographyVerificationStatus: "traditional_unverified"
   }
 ];

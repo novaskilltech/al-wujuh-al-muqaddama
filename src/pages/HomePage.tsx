@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Users, Layers, BookOpen, CheckCircle, ArrowLeft, ArrowRight, ShieldCheck, Star, Brain, GitCompare } from "lucide-react";
+import { Users, Layers, BookOpen, CheckCircle, ArrowLeft, ArrowRight, ShieldCheck, Star, Brain, GitCompare, ShieldAlert } from "lucide-react";
 import { readers } from "../data/qiraat/readers.js";
 import { narrators } from "../data/qiraat/narrators.js";
 import { chapters } from "../data/qiraat/chapters.js";
@@ -10,12 +10,18 @@ import { useLanguage } from "../context/LanguageContext.js";
 export const HomePage: React.FC = () => {
   const { lang, t, dir } = useLanguage();
 
+  useEffect(() => {
+    document.title = "الأوجه المقدمة في الأداء عن القراء العشرة";
+  }, []);
+
   // Dynamic statistics calculated directly from data layer - ZERO hardcoding
   const totalReaders = readers.length;
   const totalNarrators = narrators.length;
   const totalChapters = chapters.length;
   const totalIssues = issues.length;
-  const primaryVerifiedCount = issues.filter(i => i.verificationStatus === "verified_primary").length;
+  const explicitCount = issues.filter(i => i.evidenceLevel === "explicit_author_statement").length;
+  const derivedCount = issues.filter(i => i.evidenceLevel === "derived_from_author_method").length;
+  const pendingCount = issues.filter(i => i.verificationStatus === "needs_primary_check" || i.preferenceStatus === "needs_primary_verification").length;
 
   const ArrowIcon = dir === "rtl" ? ArrowLeft : ArrowRight;
 
@@ -37,7 +43,7 @@ export const HomePage: React.FC = () => {
           </h2>
 
           <p className="text-base sm:text-lg text-stone-700 leading-relaxed font-naskh max-w-2xl mx-auto">
-            منصة تعليمية لدراسة الأوجه الصحيحة ومعرفة الوجه المقدم في الأداء وفق منهج الشيخ علي بن محمد توفيق النحاس رحمه الله.
+            منصة علمية تعليمية لدراسة الأوجه الصحيحة ومعرفة الوجه المقدم في الأداء وفق منهج الشيخ علي بن محمد توفيق النحاس رحمه الله.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -58,27 +64,39 @@ export const HomePage: React.FC = () => {
         </div>
 
         {/* Dynamic Statistics Bar */}
-        <div className="mt-12 pt-8 border-t border-[#ebdcc8]/80 max-w-4xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 sm:gap-6">
+        <div className="mt-12 pt-8 border-t border-[#ebdcc8]/80 max-w-5xl mx-auto space-y-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
             <div className="bg-white/80 backdrop-blur-xs p-4 rounded-2xl border border-[#ebdcc8]/60 text-center">
               <span className="block text-2xl sm:text-3xl font-extrabold text-amber-900">{totalReaders}</span>
-              <span className="text-xs text-stone-600 font-medium">عدد القراء</span>
+              <span className="text-xs text-stone-600 font-medium">القراء العشرة</span>
             </div>
             <div className="bg-white/80 backdrop-blur-xs p-4 rounded-2xl border border-[#ebdcc8]/60 text-center">
               <span className="block text-2xl sm:text-3xl font-extrabold text-amber-900">{totalNarrators}</span>
-              <span className="text-xs text-stone-600 font-medium">عدد الرواة</span>
+              <span className="text-xs text-stone-600 font-medium">الرواة العشرون</span>
             </div>
             <div className="bg-white/80 backdrop-blur-xs p-4 rounded-2xl border border-[#ebdcc8]/60 text-center">
               <span className="block text-2xl sm:text-3xl font-extrabold text-amber-900">{totalChapters}</span>
-              <span className="text-xs text-stone-600 font-medium">عدد الأبواب</span>
+              <span className="text-xs text-stone-600 font-medium">الأبواب العلمية</span>
             </div>
             <div className="bg-white/80 backdrop-blur-xs p-4 rounded-2xl border border-[#ebdcc8]/60 text-center">
               <span className="block text-2xl sm:text-3xl font-extrabold text-amber-900">{totalIssues}</span>
-              <span className="text-xs text-stone-600 font-medium">عدد المسائل</span>
+              <span className="text-xs text-stone-600 font-medium">إجمالي المسائل</span>
             </div>
-            <div className="col-span-2 sm:col-span-1 bg-emerald-50/80 backdrop-blur-xs p-4 rounded-2xl border border-emerald-200 text-center">
-              <span className="block text-2xl sm:text-3xl font-extrabold text-emerald-800">{primaryVerifiedCount}</span>
-              <span className="text-xs text-emerald-900 font-medium">موثقة من الأصل</span>
+          </div>
+
+          {/* Scientific Certification Breakdown */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div className="p-3 rounded-xl bg-emerald-50/90 border border-emerald-200 text-center">
+              <strong className="block text-lg font-bold text-emerald-900">{explicitCount}</strong>
+              <span className="text-emerald-800 font-medium">نصّ صريح في الرسالة</span>
+            </div>
+            <div className="p-3 rounded-xl bg-amber-50/90 border border-amber-200 text-center">
+              <strong className="block text-lg font-bold text-amber-900">{derivedCount}</strong>
+              <span className="text-amber-800 font-medium">مستفاد من منهج الشيخ</span>
+            </div>
+            <div className="p-3 rounded-xl bg-rose-50/90 border border-rose-200 text-center">
+              <strong className="block text-lg font-bold text-rose-900">{pendingCount}</strong>
+              <span className="text-rose-800 font-medium">معلق لمقابلة الأصل المعتمد</span>
             </div>
           </div>
         </div>

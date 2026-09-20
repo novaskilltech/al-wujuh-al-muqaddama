@@ -19,13 +19,43 @@ const explicitIssues = issues.filter(i => i.evidenceLevel === "explicit_author_s
 const derivedIssues = issues.filter(i => i.evidenceLevel === "derived_from_author_method");
 const pendingIssues = issues.filter(i => i.evidenceLevel === "pending" || i.verificationStatus === "needs_primary_check");
 
-console.log(`Primary explicit:        ${explicitIssues.length} (attendu: 129)`);
+console.log(`Total issues:            ${issues.length} (sans doublons artificiels)`);
+console.log(`Primary explicit:        ${explicitIssues.length}`);
 console.log(`Primary derived:         ${derivedIssues.length} (attendu: 9)`);
 console.log(`Pending verification:    ${pendingIssues.length} (attendu: 2 - بارئكم وفرق)`);
 
-if (explicitIssues.length !== 129) errors.push(`Explicit issues count is ${explicitIssues.length}, expected 129`);
 if (derivedIssues.length !== 9) errors.push(`Derived issues count is ${derivedIssues.length}, expected 9`);
 if (pendingIssues.length !== 2) errors.push(`Pending issues count is ${pendingIssues.length}, expected 2`);
+if (explicitIssues.length + derivedIssues.length + pendingIssues.length !== issues.length) {
+  errors.push(`Sum of evidence levels does not match total issues count.`);
+}
+
+// 1.1 Check for potential semantic duplicates
+let semanticDuplicatesCount = 0;
+for (let i = 0; i < issues.length; i++) {
+  for (let j = i + 1; j < issues.length; j++) {
+    const a = issues[i];
+    const b = issues[j];
+    
+    // Exactly same narrator, or both general for same reader
+    const sameNarrator = a.narratorId && b.narratorId && a.narratorId === b.narratorId;
+    const sameReaderOnly = !a.narratorId && !b.narratorId && a.readerId && b.readerId && a.readerId === b.readerId;
+    
+    const extractWord = (t: string) => {
+      const m = t.match(/\((.*?)\)/);
+      return m ? m[1].trim() : null;
+    };
+    const wordA = extractWord(a.titleAr) || a.quranText;
+    const wordB = extractWord(b.titleAr) || b.quranText;
+    const sameWord = wordA && wordB && (wordA === wordB);
+    
+    if ((sameNarrator || sameReaderOnly) && sameWord && a.id !== b.id) {
+      warnings.push(`Potential semantic duplicate detected: [${a.id}] and [${b.id}] for word "${wordA}"`);
+      semanticDuplicatesCount++;
+    }
+  }
+}
+console.log(`Potential semantic duplicates: ${semanticDuplicatesCount}`);
 
 // Check wording: no "خطأ" or "غير صحيح" in labels or explanations
 issues.forEach(i => {

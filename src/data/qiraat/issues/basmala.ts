@@ -9,16 +9,15 @@ export const basmalaIssues: QiraatIssue[] = [
     narratorId: "qalun",
     scope: "narrator",
     evidenceLevel: "explicit_author_statement",
-    ruleType: "preferred_face",
+    ruleType: "base_rule",
     validFaces: [
-      { id: "face-basmala", labelAr: "البسملة بين السورتين", performanceType: "basmala" },
-      { id: "face-sakt", labelAr: "السكت بلا بسملة", performanceType: "sakt" },
-      { id: "face-wasl", labelAr: "الوصل بلا بسملة", performanceType: "wasl" }
+      { id: "face-basmala", labelAr: "إثبات البسملة بين السورتين", performanceType: "basmala" }
     ],
     preferredFaceId: "face-basmala",
-    preferenceStatus: "preferred",
-    simpleExplanationAr: "قالون له بين السورتين ثلاثة أوجه، والوجه المقدم في الأداء عنه هو البسملة.",
-    detailedExplanationAr: "روى قالون عن نافع بين كل سورتين البسملة والسكت والوصل، واختار الشيخ النحاس تبعاً لأئمة الأداء تقديم البسملة.",
+    preferenceStatus: "single",
+    simpleExplanationAr: "مذهب قالون عن نافع الفصل بالبسملة قولاً واحداً بين كل سورتين (سوى ما بين الأنفال وبراءة).",
+    detailedExplanationAr: "روى قالون عن نافع إثبات البسملة حتماً بين كل سورتين، وليس له سكت ولا وصل بلا بسملة في هذا الباب. أما الأوجه الجائزة له حال الإتيان بالبسملة بين السورتين فهي ثلاثة أوجه عقلية وأدائية: (1) قطع الجميع: الوقف على آخر السورة ثم الوقف على البسملة ثم الابتداء بأول السورة التالية. (2) وصل الجميع: وصل آخر السورة بالبسملة بأول السورة التالية في نَفَس واحد. (3) قطع الأول ووصل الثاني بالثالث: الوقف على آخر السورة ووصل البسملة بأول السورة التالية. ويمتنع وجه رابع إجماعاً وهو وصل آخر السورة بالبسملة والوقف عليها ثم الابتداء بالسورة لأن البسملة جُعلت لأوائل السور لا لأواخرها.",
+    memoryRuleAr: "قالون يفصل بالبسملة حتماً بين السورتين كالكسائي وعاصم وابن كثير، وله مع البسملة ثلاثة أوجه جائزة.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     poemVerseIds: ["poem-003"],
     difficulty: 1,

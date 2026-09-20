@@ -120,6 +120,9 @@ export const imalaIssues: QiraatIssue[] = [
     ],
     preferenceStatus: "single",
     simpleExplanationAr: "ابن ذكوان يميل: (زاد، حمارك/الحمار، المحراب)، ويفتح: (عمران، الإكرام، هار).",
+    detailedExplanationAr: "روي عن ابن ذكوان من طريق الأخفش إمالة ألفاظ مخصوصة: أمال (المحراب) حيث ورد إذا كان مجروراً، و(حمارك) و(الحمار)، و(زاد) في البقرة، وفتح ألفاظاً أخرى كـ (عمران) و(الإكرام) و(هار). واختيار الشيخ النحاس جارٍ على تحرير الأخفش عن ابن ذكوان في التيسير.",
+    preferenceReasonAr: "مأخوذ من طريق الأخفش عن ابن ذكوان في التيسير والتحبير والشاطبية.",
+    memoryRuleAr: "ابن ذكوان يميل: المحراب (المجرور)، وحمارك، والحمار، وزاد.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     difficulty: 2,
     verificationStatus: "verified_primary"

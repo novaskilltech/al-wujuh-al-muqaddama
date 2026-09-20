@@ -50,14 +50,18 @@ export function getIssuesByPath(pathId: string): QiraatIssue[] {
  * استرجاع المسائل الخاصة بباب معين
  */
 export function getIssuesByChapter(chapterId: string): QiraatIssue[] {
-  return issues.filter(issue => issue.chapterId === chapterId);
+  return issues.filter(
+    issue => issue.chapterId === chapterId || issue.chapterIds?.includes(chapterId)
+  );
 }
 
 /**
  * استرجاع المسائل الخاصة بسورة معينة برقمها الكنسي (1-114)
  */
 export function getIssuesBySurah(surahNumber: number): QiraatIssue[] {
-  return issues.filter(issue => issue.surahNumber === surahNumber);
+  return issues.filter(
+    issue => issue.surahNumber === surahNumber || issue.surahNumbers?.includes(surahNumber)
+  );
 }
 
 /**

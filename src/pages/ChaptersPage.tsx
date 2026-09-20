@@ -56,9 +56,15 @@ export const ChaptersPage: React.FC = () => {
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold text-amber-700">الباب {chapter.order}</span>
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-900 border border-amber-200 font-semibold">
-                      {count} مسائل
-                    </span>
+                    {count === 0 ? (
+                      <span className="text-[11px] px-2 py-0.5 rounded-full bg-amber-50 text-amber-900 border border-amber-300 font-bold">
+                        قيد الاستكمال
+                      </span>
+                    ) : (
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-900 border border-amber-200 font-semibold">
+                        {count} مسائل
+                      </span>
+                    )}
                   </div>
                   <h3 className="text-lg font-bold text-stone-900 group-hover:text-amber-900 transition-colors font-quran">
                     {chapter.titleAr}

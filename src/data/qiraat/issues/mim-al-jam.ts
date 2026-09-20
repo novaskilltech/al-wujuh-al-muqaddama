@@ -12,13 +12,15 @@ export const mimAlJamIssues: QiraatIssue[] = [
     evidenceLevel: "explicit_author_statement",
     ruleType: "preferred_face",
     validFaces: [
-      { id: "face-sila", labelAr: "صلة ميم الجمع بواو لفظية بمقدار حركتين", performanceType: "sila" },
+      { id: "face-sila", labelAr: "صلة ميم الجمع بواو لفظية، فإن جاء بعدها همز قطع جرى على الصلة حكم المد المنفصل بحسب الوجه المقروء به", performanceType: "sila" },
       { id: "face-sukun", labelAr: "إسكان ميم الجمع", performanceType: "sukun" }
     ],
     preferredFaceId: "face-sila",
     preferenceStatus: "preferred",
     simpleExplanationAr: "قالون له في ميم الجمع الواقعة قبل متحرك وجهان: الإسكان والصلة، والوجه المقدم عند الشيخ النحاس هو الصلة.",
-    detailedExplanationAr: "نص الشيخ علي النحاس في الرسالة والقصيدة على تقديم الصلة لقالون في ميم الجمع إذا وقع بعدها متحرك، خلافاً لمن يقدم الإسكان.",
+    detailedExplanationAr: "روي عن قالون في ميم الجمع الواقعة قبل متحرك وجهان صحيحان: الإسكان والصلة، والوجه المقدم عند الشيخ النحاس هو الصلة. وتفصيل ذلك: (1) قبل حرف متحرك عادي (غير همزة قطع) نحو {عَلَيْهِمْ غَيْرِ}: فتكون الصلة بواو لفظية بمقدار حركتين (مداً طبيعياً). (2) قبل همزة قطع نحو {عَلَيْهِمْ ءَأَنذَرْتَهُمْ}: فتجري الصلة مجرى المد المنفصل (حركتان مع قصر المنفصل، وأربع حركات مع توسط المنفصل).",
+    preferenceReasonAr: "تقديم الصلة لقالون هو اختيار الإمام أبي عمرو الداني في التيسير وجامع البيان.",
+    memoryRuleAr: "قالون يقدّم صلة ميم الجمع على الإسكان، فإن وقع بعدها همز قطع جرى عليها حكم المد المنفصل.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     poemVerseIds: ["poem-005"],
     difficulty: 1,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BookOpen, FileText, ArrowRight, ArrowLeft, Layers, ShieldCheck } from "lucide-react";
 import { issues } from "../data/qiraat/issues/index.js";
@@ -10,6 +10,10 @@ import { useLanguage } from "../context/LanguageContext.js";
 export const RisalaPage: React.FC = () => {
   const { dir } = useLanguage();
   const risalaSource = sources.find(s => s.id === "an-nahhas-risala");
+
+  useEffect(() => {
+    document.title = "الرسالة الغراء | الأوجه المقدمة";
+  }, []);
 
   // Issues that have specific risalaPages documented
   const issuesWithPages = issues.filter(i => i.risalaPages && i.risalaPages.length > 0);
@@ -49,7 +53,7 @@ export const RisalaPage: React.FC = () => {
           </div>
           <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-center shadow-2xs">
             <span className="text-2xl font-bold text-emerald-900 block">المصدر الأساسي</span>
-            <span className="text-xs text-emerald-900">الرسالة الغراء (نص محقق)</span>
+            <span className="text-xs text-emerald-900">المادة العلمية المستخلصة من الرسالة الغراء</span>
           </div>
         </div>
       </div>

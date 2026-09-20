@@ -5,11 +5,15 @@ export const raatIssues: QiraatIssue[] = [
     id: "raat-six-words-warsh",
     titleAr: "الراءات لورش في الكلمات الست (ذكراً، ستراً، إمراً، وزراً، حجراً، صهراً)",
     chapterId: "raat",
+    chapterIds: ["farsh-al-huruf"],
     readerId: "nafi",
     narratorId: "warsh",
     pathId: "al-azraq",
     scope: "group",
     evidenceLevel: "explicit_author_statement",
+    surahNumber: 18,
+    surahNameAr: "الكهف",
+    ayahNumbers: [71],
     ruleType: "preferred_face",
     validFaces: [
       { id: "face-tafkhim", labelAr: "التفخيم", performanceType: "other", notesAr: "التفخيم هو الوجه المقدم" },
@@ -18,6 +22,9 @@ export const raatIssues: QiraatIssue[] = [
     preferredFaceId: "face-tafkhim",
     preferenceStatus: "preferred",
     simpleExplanationAr: "ورش في الكلمات الست المنونة (ذكراً، ستراً، إمراً، وزراً، حجراً، صهراً) له التفخيم والترقيق، والمقدم عند الشيخ النحاس هو التفخيم.",
+    detailedExplanationAr: "روى الأزرق عن ورش في هذه الكلمات الست المنونة التي سكن ما قبل راءها بعد كسرة وجهين: التفخيم والترقيق، والمقدم في الأداء عند الشيخ النحاس تبعاً للداني والشاطبي هو التفخيم.",
+    preferenceReasonAr: "تقديم التفخيم هو اختيار الإمام الداني في التيسير وجامع البيان والشاطبي في الحرز (وفخمت الراء في ذكرا وسترا وبابهما).",
+    memoryRuleAr: "ورش يقدّم التفخيم في الكلمات الست: ذكراً، ستراً، إمراً، وزراً، حجراً، صهراً.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     difficulty: 2,
     verificationStatus: "verified_primary"
@@ -65,7 +72,7 @@ export const raatIssues: QiraatIssue[] = [
       { id: "face-tafkhim", labelAr: "التفخيم", performanceType: "other" }
     ],
     preferenceStatus: "needs_primary_verification",
-    simpleExplanationAr: "حكم راء (فِرْقٍ) بالشعراء وصلاً لورش من طريق الأزرق فيه خلاف شهير بين الترقيق والتفخيم (لوقوع حرف الاستعلاء المكسور بعدها)، وتعيين ما إذا كان الشيخ يقدم وجهاً أو يجريهما على السواء موقوف على المقابلة المباشرة للأصل الخطي.",
+    simpleExplanationAr: "حكم راء (فِرْقٍ) بالشعراء وصلاً لورش من طريق الأزرق فيه خلاف شهير بين الترقيق والتفخيم (لوقوع حرف الاستعلاء المكسور بعدها)، وتعيين ما إذا كان الشيخ يقدم وجهاً أو يجريهما على السواء موقوف على المقابلة المباشرة للأصل المعتمد.",
     sourceIds: ["an-nahhas-risala"],
     difficulty: 3,
     verificationStatus: "needs_primary_check"

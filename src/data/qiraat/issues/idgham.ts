@@ -30,6 +30,7 @@ export const idghamIssues: QiraatIssue[] = [
     id: "idgham-saghir-wajabat-junubuha-ibn-dhakwan",
     titleAr: "الإدغام الصغير في (وجبت جنوبها) لابن ذكوان",
     chapterId: "idgham-saghir",
+    chapterIds: ["farsh-al-huruf"],
     readerId: "ibn-amir",
     narratorId: "ibn-dhakwan",
     pathId: "ibn-dhakwan-al-akhfash",
@@ -47,6 +48,9 @@ export const idghamIssues: QiraatIssue[] = [
     preferredFaceId: "face-izhar",
     preferenceStatus: "preferred",
     simpleExplanationAr: "ابن ذكوان في (وجبت جنوبها) الوجه المقدم عنه هو الإظهار.",
+    detailedExplanationAr: "روي عن ابن ذكوان من طريق الأخفش في تاء التأنيث عند الجيم في (وجبت جنوبها) بالحج وجهان: إظهار التاء عند الجيم وإدغامها فيها، والوجه المقدم عنه في الأداء هو الإظهار.",
+    preferenceReasonAr: "تقديم الإظهار لابن ذكوان هو مذهب الإمام أبي عمرو الداني في التيسير.",
+    memoryRuleAr: "ابن ذكوان في (وجبت جنوبها) يقدّم الإظهار على الإدغام.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     difficulty: 2,
     verificationStatus: "verified_primary"
@@ -158,11 +162,17 @@ export const idghamIssues: QiraatIssue[] = [
     quranText: "يَا بُنَيَّ ارْكَب مَّعَنَا",
     ruleType: "preferred_face",
     validFaces: [
-      { id: "face-izhar-qalun-bazzi", labelAr: "الإظهار (المقدم لقالون والبزي)", performanceType: "izhar" },
-      { id: "face-idgham-khallad", labelAr: "الإدغام (المقدم لخلاد)", performanceType: "idgham" }
+      { id: "face-izhar", labelAr: "الإظهار (المقدم لقالون والبزي)", performanceType: "izhar" },
+      { id: "face-idgham", labelAr: "الإدغام (المقدم لخلاد)", performanceType: "idgham" }
+    ],
+    rawiPreferences: [
+      { narratorId: "qalun", preferredFaceId: "face-izhar", notesAr: "المقدم لقالون هو إظهار الباء عند الميم." },
+      { narratorId: "al-bazzi", preferredFaceId: "face-izhar", notesAr: "المقدم للبزي هو الإظهار." },
+      { narratorId: "khallad", preferredFaceId: "face-idgham", notesAr: "المقدم لخلاد من طريق الشاطبية والتيسير هو الإدغام." }
     ],
     preferenceStatus: "disputed",
     simpleExplanationAr: "في (اركب معنا) بهود: قالون -> الإظهار، البزي -> الإظهار، خلاد -> الإدغام.",
+    detailedExplanationAr: "اختلف أهل الأداء في (اركب معنا) بهود لمن ورد عنه الوجهان: فالمقدم لقالون والبزي هو الإظهار، بينما المقدم لخلاد عن حمزة هو الإدغام.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     difficulty: 2,
     verificationStatus: "verified_primary"
@@ -171,6 +181,7 @@ export const idghamIssues: QiraatIssue[] = [
     id: "idgham-saghir-yalhath-dhalika-qalun",
     titleAr: "الإدغام الصغير في (يلهث ذلك) لقالون",
     chapterId: "idgham-saghir",
+    chapterIds: ["farsh-al-huruf"],
     readerId: "nafi",
     narratorId: "qalun",
     pathId: "abi-nashit-an-qalun",
@@ -188,6 +199,9 @@ export const idghamIssues: QiraatIssue[] = [
     preferredFaceId: "face-izhar",
     preferenceStatus: "preferred",
     simpleExplanationAr: "قالون في (يلهث ذلك) بالأعراف الوجه المقدم عنه هو الإظهار.",
+    detailedExplanationAr: "روي عن قالون في (يلهث ذلك) بالأعراف وجهان صحيحان: إظهار الثاء عند الذال وإدغامها فيها، والوجه المقدم عنه في الأداء هو الإظهار.",
+    preferenceReasonAr: "تقديم الإظهار لقالون هو نص أبي عمرو الداني في التيسير.",
+    memoryRuleAr: "قالون في (يلهث ذلك) يقدّم الإظهار على الإدغام.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     difficulty: 2,
     verificationStatus: "verified_primary"

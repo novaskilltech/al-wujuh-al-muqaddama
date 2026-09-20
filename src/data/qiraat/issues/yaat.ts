@@ -6,6 +6,7 @@ export const yaatIssues: QiraatIssue[] = [
     id: "yaat-idhafa-mahyaya-warsh",
     titleAr: "ياء الإضافة في (محياي) لورش",
     chapterId: "yaat-al-idhafa",
+    chapterIds: ["farsh-al-huruf"],
     readerId: "nafi",
     narratorId: "warsh",
     pathId: "al-azraq",
@@ -17,12 +18,15 @@ export const yaatIssues: QiraatIssue[] = [
     quranText: "قُلْ إِنَّ صَلَاتِي وَنُسُكِي وَمَحْيَايَ وَمَمَاتِي لِلَّهِ رَبِّ الْعَالَمِينَ",
     ruleType: "preferred_face",
     validFaces: [
-      { id: "face-sukun", labelAr: "إسكان الياء مع المد المشبع", performanceType: "sukun" },
-      { id: "face-fath", labelAr: "فتح الياء", performanceType: "fath" }
+      { id: "face-sukun", labelAr: "إسكان الياء مع المد المشبع ست حركات (وَمَحْيَايْ)", performanceType: "sukun" },
+      { id: "face-fath", labelAr: "فتح الياء بلا مد (وَمَحْيَايَ)", performanceType: "fath" }
     ],
     preferredFaceId: "face-sukun",
     preferenceStatus: "preferred",
     simpleExplanationAr: "ورش في (محياي) بالأنعام له الإسكان والفتح، والمقدم في الأداء عنه هو الإسكان.",
+    detailedExplanationAr: "روى الأزرق عن ورش في (محياي) بالأنعام وجهين صحيحين: إسكان الياء مع المد المشبع ست حركات للتخلص من التقاء الساكنين، وفتح الياء (محيايَ)، والوجه المقدم في الأداء هو الإسكان.",
+    preferenceReasonAr: "تقديم الإسكان هو نص الشاطبي في اللامية (ومحياي بالإسكان صح)، والداني في التيسير.",
+    memoryRuleAr: "ورش في (محياي) يقدّم الإسكان مع المد المشبع على الفتح.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     difficulty: 2,
     verificationStatus: "verified_primary"
@@ -40,11 +44,16 @@ export const yaatIssues: QiraatIssue[] = [
     quranText: "قَالَ إِنَّمَا أُوتِيتُهُ عَلَىٰ عِلْمٍ عِندِي ۚ أَوَلَمْ يَعْلَمْ",
     ruleType: "preferred_face",
     validFaces: [
-      { id: "face-fath-qunbul", labelAr: "فتح الياء لقنبل", performanceType: "fath" },
-      { id: "face-sukun-bazzi", labelAr: "إسكان الياء للبزي", performanceType: "sukun" }
+      { id: "face-fath", labelAr: "فتح الياء وصلاً (عِنْدِيَ أَوَلَمْ)", performanceType: "fath" },
+      { id: "face-sukun", labelAr: "إسكان الياء وصلاً (عِنْدِي أَوَلَمْ)", performanceType: "sukun" }
+    ],
+    rawiPreferences: [
+      { narratorId: "qunbul", preferredFaceId: "face-fath", notesAr: "المقدم لقنبل هو فتح ياء الإضافة وصلاً." },
+      { narratorId: "al-bazzi", preferredFaceId: "face-sukun", notesAr: "المقدم للبزي هو إسكان ياء الإضافة وصلاً." }
     ],
     preferenceStatus: "disputed",
     simpleExplanationAr: "في (عندي أولم) بالقصص: قنبل يفتح الياء، والبزي يسكنها.",
+    detailedExplanationAr: "اختلف راويا ابن كثير في ياء الإضافة في (عندي أولم) بالقصص: فقنبل يفتح الياء وصلاً، والبزي يسكنها وصلاً، ولكل منهما وجهه المعتمد في الرواية.",
     sourceIds: ["an-nahhas-risala", "an-nahhas-qasida"],
     difficulty: 2,
     verificationStatus: "verified_primary"
@@ -151,6 +160,7 @@ export const yaatIssues: QiraatIssue[] = [
     id: "yaat-zawaid-fala-tas-alni-ibn-dhakwan",
     titleAr: "ياء الزائدة في (فلا تسألن) لابن ذكوان",
     chapterId: "yaat-al-zawaid",
+    chapterIds: ["farsh-al-huruf"],
     readerId: "ibn-amir",
     narratorId: "ibn-dhakwan",
     pathId: "ibn-dhakwan-al-akhfash",

@@ -22,6 +22,10 @@ export const DisputesPage: React.FC = () => {
   const { dir } = useLanguage();
   const [activeTab, setActiveTab] = useState<DisputeTab>("all");
 
+  React.useEffect(() => {
+    document.title = "الخلافات والمسائل الخاصة | الأوجه المقدمة";
+  }, []);
+
   const equalIssues = useMemo(() => {
     return issues.filter(i => i.preferenceStatus === "equal");
   }, []);
@@ -169,7 +173,7 @@ export const DisputesPage: React.FC = () => {
           <div className="space-y-1">
             <strong className="font-bold block">إشعار الأمانة العلمية:</strong>
             <p className="leading-relaxed text-stone-700">
-              حرصاً على سلامة التلقي، تم عزل مسألتي <strong>«بارئكم»</strong> لأبي عمرو و<strong>«فِرْقٍ»</strong> لجميع القراء عن وضع الحفظ المعتمد والاختبارات القطعية، لحين مقابلة النسخة الخطية والتأكد التام من عبارة الشيخ رحمه الله.
+              حرصاً على سلامة التلقي، تم عزل مسألتي <strong>«بارئكم»</strong> لأبي عمرو و<strong>«فِرْقٍ»</strong> لورش من طريق الأزرق عن وضع الحفظ المعتمد والاختبارات القطعية، لحين مقابلة النسخة الخطية والتأكد التام من عبارة الشيخ رحمه الله في الأصل المعتمد.
             </p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { 
   User, 
@@ -18,6 +18,10 @@ import { useLanguage } from "../context/LanguageContext.js";
 export const SheikhPage: React.FC = () => {
   const { dir } = useLanguage();
 
+  useEffect(() => {
+    document.title = "ترجمة الشيخ علي النحاس رحمه الله | الأوجه المقدمة";
+  }, []);
+
   return (
     <div className="max-w-4xl mx-auto space-y-10 py-6">
       {/* Breadcrumb */}
@@ -36,7 +40,7 @@ export const SheikhPage: React.FC = () => {
         <div className="space-y-2">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold border border-amber-300">
             <Star className="w-3.5 h-3.5 fill-amber-600 text-amber-700" />
-            <span>علاّمة القراءات ومحرر الأوجه في عصره</span>
+            <span>علاّمة ومقرئ معتنٍ بتحرير الأوجه</span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-stone-900 font-quran leading-tight">
             فضيلة الشيخ علي بن محمد توفيق النحاس
@@ -47,7 +51,7 @@ export const SheikhPage: React.FC = () => {
         </div>
 
         <p className="text-stone-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed font-quran">
-          أحد كبار أئمة الإقراء والتحرير في العصر الحديث، صاحب التحقيقات الفريدة والمنظومات الرائقة في ضبط روايات وأوجه القراء العشرة من طريقي الشاطبية والدرة وطريق طيبة النشر.
+          أحد علماء الإقراء المعتنين بضبط الروايات وتحرير الأوجه، وفق منهج الشيخ في تحرير الأوجه من طرق التيسير وتحبير التيسير وما يتصل بأصول الشاطبية والدرة وطرق الأداء.
         </p>
       </div>
 
@@ -66,10 +70,10 @@ export const SheikhPage: React.FC = () => {
 
           <div className="text-stone-700 text-sm sm:text-base leading-relaxed space-y-4 font-quran">
             <p>
-              يُعدّ فضيلة الشيخ <strong>علي بن محمد توفيق النحاس</strong> من أبرز أعلام الإقراء الذين جمعوا بين الرواية والدراية، والتلقي المتقن والتحرير الفائق. عُرف بدقته المتناهية في تمييز الأوجه الجائزة من الممنوعة، وتحديد ما هو <strong>مقدّم في الأداء</strong> على وجه الخصوص عند تلاوة القرآن الكريم والجمع بالعشر.
+              يُعدّ فضيلة الشيخ <strong>علي بن محمد توفيق النحاس</strong> من أهل الإقراء الذين اعتنوا بالرواية والدراية، والتلقي المتقن والتحرير الفائق. عُرف بعنايته بتمييز الأوجه الجائزة من الممنوعة، وتحديد ما هو <strong>مقدّم في الأداء</strong> على وجه الخصوص عند تلاوة القرآن الكريم.
             </p>
             <p>
-              تلقى الشيخ القراءات العشر الصغرى والكبرى عن أكابر مشايخ الإقراء المسندين، واتصل سنده بأئمة هذا الفن كابن الجزري والشاطبي والداني إلى رسول الله ﷺ، فكان مرجعاً موثوقاً في معضلات التحرير ووجوه الخلاف بين الطرق.
+              تلقى القراءات بالأسانيد المتصلة عند أهل هذا الفن، وعُني بتحرير المسائل وضبط وجوه الخلاف بين الطرق وفق الأصول المعتمدة.
             </p>
           </div>
         </section>
@@ -148,8 +152,8 @@ export const SheikhPage: React.FC = () => {
           </div>
 
           <div className="text-stone-700 text-sm sm:text-base leading-relaxed space-y-4 font-quran">
-            <p>
-              يقوم منهج الشيخ النحاس رحمه الله على مبدأ علمي أصيل اعتمدناه كقاعدة ناظمة لهذا المشروع الرقمي:
+            <p className="bg-amber-50/70 p-4 rounded-xl border border-amber-200 text-stone-800 text-sm leading-relaxed">
+              المراد بالوجه المقدم في هذا المشروع هو الوجه الذي اختاره الشيخ علي النحاس اعتماداً على الطريق الذي قرأ به الإمام الداني أو ابن الجزري على شيخه في الرواية المسندة في المصدر الذي بنى عليه اختياره، لا مجرد الوجه الأشهر في كتب التعليم. وقد يكون الوجه الآخر صحيحاً ثابتاً في الرواية، لكنه ليس هو الوجه المقدم في الطريق المعتمد هنا.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
@@ -169,7 +173,7 @@ export const SheikhPage: React.FC = () => {
                   <span>2. ⭐ المقدَّم (Préféré)</span>
                 </div>
                 <p className="text-xs text-stone-600">
-                  الوجه الذي يُبدأ به في الجمع أو الإفراد عند الشيخ، لشهرته أو أصالته في الطريق.
+                  الوجه الذي اختاره الشيخ اعتماداً على طريق الرواية المسندة في المصدر المعتمد.
                 </p>
               </div>
 
@@ -179,13 +183,13 @@ export const SheikhPage: React.FC = () => {
                   <span>3. غير مقدم هنا</span>
                 </div>
                 <p className="text-xs text-stone-600">
-                  وجه صحيح مقروء به، لكنه ليس هو المبتدأ به في رواية الشيخ وطريقه.
+                  وجه صحيح مقروء به، لكنه ليس هو الوجه المقدم في الطريق المعتمد هنا.
                 </p>
               </div>
             </div>
 
             <p className="pt-2">
-              كما التزم الشيخ بالأمانة العلمية التامة؛ فلم يرجح في المسائل التي تساوت فيها الأوجه مروية، وذكر خلاف الأئمة حيث وجد، وأحكم صلة الروايات بطرقها (كالشاطبية والدرة وطيبة النشر).
+              كما التزم الشيخ بالأمانة العلمية التامة؛ فلم يرجح في المسائل التي تساوت فيها الأوجه مروية، وذكر خلاف الأئمة حيث وجد، وفق منهج الشيخ في تحرير الأوجه من طرق التيسير وتحبير التيسير وما يتصل بأصول الشاطبية والدرة وطرق الأداء.
             </p>
           </div>
         </section>

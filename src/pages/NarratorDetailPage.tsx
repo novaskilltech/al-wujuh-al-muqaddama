@@ -17,6 +17,12 @@ export const NarratorDetailPage: React.FC = () => {
   const narratorPaths = paths.filter(p => p.narratorId === narratorId);
   const narratorIssues = narratorId ? getIssuesByNarrator(narratorId) : [];
 
+  React.useEffect(() => {
+    if (narrator && reader) {
+      document.title = `رواية ${narrator.nameAr} عن ${reader.nameAr} | الأوجه المقدمة`;
+    }
+  }, [narrator, reader]);
+
   if (!narrator || !reader) {
     return (
       <div className="text-center py-20">

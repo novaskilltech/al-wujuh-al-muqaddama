@@ -26,6 +26,12 @@ export const SurahDetailPage: React.FC = () => {
 
   const surahName = surahIssues[0]?.surahNameAr || `سورة رقم ${num}`;
 
+  React.useEffect(() => {
+    if (surahName) {
+      document.title = `${surahName} | الأوجه المقدمة`;
+    }
+  }, [surahName]);
+
   // Synthesis calculations
   const totalIssues = surahIssues.length;
   const preferredCount = surahIssues.filter(i => i.preferenceStatus === "preferred" && i.preferredFaceId).length;

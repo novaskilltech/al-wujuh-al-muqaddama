@@ -19,6 +19,7 @@ export const Header: React.FC = () => {
     { path: "/surahs", label: t("nav.surahs") },
     { path: "/qasida", label: t("nav.qasida") },
     { path: "/risala", label: t("nav.risala") },
+    { path: "/glossary", label: t("nav.glossary") },
     { path: "/memorize", label: t("nav.memorize") },
     { path: "/quiz", label: t("nav.quiz") },
     { path: "/compare", label: t("nav.compare") },
@@ -36,6 +37,9 @@ export const Header: React.FC = () => {
               شرح الرسالة الغراء والقصيدة الحسناء للشيخ علي بن محمد توفيق النحاس رحمه الله
             </span>
             <div className="flex items-center gap-4">
+              <Link to="/glossary" className="hover:text-amber-800 transition-colors font-medium">
+                {t("nav.glossary")}
+              </Link>
               <Link to="/sheikh-an-nahhas" className="hover:text-amber-800 transition-colors font-medium">
                 {t("nav.sheikh")}
               </Link>

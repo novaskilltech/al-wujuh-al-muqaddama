@@ -11,9 +11,9 @@ export const poemVerses: PoemVerse[] = [
   {
     id: "poem-001",
     order: 1,
-    fullText: "بَدَأْتُ بِحَمْدِ اللهِ فِي بَدْءِ مَنْطِقِي ... وَصَلَّيْتُ تَعْظِيمًا عَلَى خَيْرِ مُطْلَقِ",
-    firstHemistichAr: "بَدَأْتُ بِحَمْدِ اللهِ فِي بَدْءِ مَنْطِقِي",
-    secondHemistichAr: "وَصَلَّيْتُ تَعْظِيمًا عَلَى خَيْرِ مُطْلَقِ",
+    fullText: "البيت رقم 1 — النص قيد النسخ والمقابلة على الأصل المعتمد",
+    firstHemistichAr: "البيت رقم 1 — قيد المقابلة",
+    secondHemistichAr: "النص قيد النسخ والمقابلة",
     textStatus: "pending_transcription",
     chapterIds: ["istiadha"],
     issueIds: []
@@ -21,9 +21,9 @@ export const poemVerses: PoemVerse[] = [
   {
     id: "poem-002",
     order: 2,
-    fullText: "وَبَعْدُ فَخُذْ نَظْمًا حَسَنًا مُحَرَّرًا ... لِأَوْجُهِ تَقْدِيمِ الْأَدَاءِ لِتَظْفَرَا",
-    firstHemistichAr: "وَبَعْدُ فَخُذْ نَظْمًا حَسَنًا مُحَرَّرًا",
-    secondHemistichAr: "لِأَوْجُهِ تَقْدِيمِ الْأَدَاءِ لِتَظْفَرَا",
+    fullText: "البيت رقم 2 — النص قيد النسخ والمقابلة على الأصل المعتمد",
+    firstHemistichAr: "البيت رقم 2 — قيد المقابلة",
+    secondHemistichAr: "النص قيد النسخ والمقابلة",
     textStatus: "pending_transcription",
     chapterIds: ["istiadha"],
     issueIds: []
@@ -31,9 +31,9 @@ export const poemVerses: PoemVerse[] = [
   {
     id: "poem-003",
     order: 3,
-    fullText: "وَبَسْمَلَ بَيْنَ السُّورَتَيْنِ لِقَالُونَا ... وَوَرْشُهُمُ بِالسَّكْتِ قَدْ كَانَ أَوْلَى",
-    firstHemistichAr: "وَبَسْمَلَ بَيْنَ السُّورَتَيْنِ لِقَالُونَا",
-    secondHemistichAr: "وَوَرْشُهُمُ بِالسَّكْتِ قَدْ كَانَ أَوْلَى",
+    fullText: "البيت رقم 3 — النص قيد النسخ والمقابلة على الأصل المعتمد",
+    firstHemistichAr: "البيت رقم 3 — قيد المقابلة",
+    secondHemistichAr: "النص قيد النسخ والمقابلة",
     textStatus: "pending_transcription",
     chapterIds: ["basmala"],
     issueIds: ["basmala-qalun", "basmala-warsh"]
@@ -41,9 +41,9 @@ export const poemVerses: PoemVerse[] = [
   {
     id: "poem-004",
     order: 4,
-    fullText: "وَوَصْلُ أَبِي عَمْرٍو بِدَوْرِيهِ قَدْ جَلَا ... وَسُوسِيُّهُمْ بِالسَّكْتِ حُزْهُ مُفَضَّلَا",
-    firstHemistichAr: "وَوَصْلُ أَبِي عَمْرٍو بِدَوْرِيهِ قَدْ جَلَا",
-    secondHemistichAr: "وَسُوسِيُّهُمْ بِالسَّكْتِ حُزْهُ مُفَضَّلَا",
+    fullText: "البيت رقم 4 — النص قيد النسخ والمقابلة على الأصل المعتمد",
+    firstHemistichAr: "البيت رقم 4 — قيد المقابلة",
+    secondHemistichAr: "النص قيد النسخ والمقابلة",
     textStatus: "pending_transcription",
     chapterIds: ["basmala"],
     issueIds: ["basmala-al-duri-abu-amr", "basmala-al-susi"]
@@ -51,9 +51,9 @@ export const poemVerses: PoemVerse[] = [
   {
     id: "poem-005",
     order: 5,
-    fullText: "وَصِلْ مِيمَ جَمْعٍ عَنْ أَبِي جَعْفَرٍ رَضُوا ... وَقَالُونُ بِالصِّلَاتِ فِي النَّظْمِ رَجَّحُوا",
-    firstHemistichAr: "وَصِلْ مِيمَ جَمْعٍ عَنْ أَبِي جَعْفَرٍ رَضُوا",
-    secondHemistichAr: "وَقَالُونُ بِالصِّلَاتِ فِي النَّظْمِ رَجَّحُوا",
+    fullText: "البيت رقم 5 — النص قيد النسخ والمقابلة على الأصل المعتمد",
+    firstHemistichAr: "البيت رقم 5 — قيد المقابلة",
+    secondHemistichAr: "النص قيد النسخ والمقابلة",
     textStatus: "pending_transcription",
     chapterIds: ["meem-al-jam"],
     issueIds: ["meem-al-jam-qalun", "meem-al-jam-abu-jafar"]
