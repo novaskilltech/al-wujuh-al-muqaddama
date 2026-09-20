@@ -22,6 +22,7 @@ const translations: Record<string, Record<Language, string>> = {
   "nav.compare": { ar: "المقارنة", fr: "Comparateur" },
   "nav.disputes": { ar: "المختلف فيها", fr: "Divergences" },
   "nav.glossary": { ar: "المصطلحات", fr: "Glossaire" },
+  "nav.about": { ar: "عن المنصة", fr: "À propos" },
   "nav.verification": { ar: "قيد المراجعة", fr: "À vérifier" },
   "nav.sheikh": { ar: "عن الشيخ", fr: "À propos du Cheikh" },
   "nav.search": { ar: "البحث (Ctrl+K)", fr: "Recherche (Ctrl+K)" },

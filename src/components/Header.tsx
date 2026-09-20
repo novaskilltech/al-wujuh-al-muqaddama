@@ -14,6 +14,7 @@ export const Header: React.FC = () => {
 
   const navLinks = [
     { path: "/", label: t("nav.home") },
+    { path: "/about", label: t("nav.about") },
     { path: "/readers", label: t("nav.readers") },
     { path: "/chapters", label: t("nav.chapters") },
     { path: "/surahs", label: t("nav.surahs") },
@@ -37,6 +38,9 @@ export const Header: React.FC = () => {
               شرح الرسالة الغراء والقصيدة الحسناء للشيخ علي بن محمد توفيق النحاس رحمه الله
             </span>
             <div className="flex items-center gap-4">
+              <Link to="/about" className="hover:text-amber-800 transition-colors font-medium">
+                {t("nav.about")}
+              </Link>
               <Link to="/glossary" className="hover:text-amber-800 transition-colors font-medium">
                 {t("nav.glossary")}
               </Link>

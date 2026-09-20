@@ -46,13 +46,19 @@ export const HomePage: React.FC = () => {
             منصة علمية تعليمية لدراسة الأوجه الصحيحة ومعرفة الوجه المقدم في الأداء وفق منهج الشيخ علي بن محمد توفيق النحاس رحمه الله.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pt-2">
+            <Link
+              to="/about"
+              className="px-6 py-3 rounded-xl bg-amber-800 hover:bg-amber-900 text-white font-bold text-sm sm:text-base shadow-md hover:shadow-lg transition-all flex items-center gap-2"
+            >
+              <span>دليل المنصة والتعريف بها</span>
+              <ArrowIcon className="w-4 h-4" />
+            </Link>
             <Link
               to="/chapters"
-              className="px-6 py-3 rounded-xl bg-amber-700 hover:bg-amber-800 text-white font-bold text-sm sm:text-base shadow-md hover:shadow-lg transition-all flex items-center gap-2"
+              className="px-6 py-3 rounded-xl bg-amber-100/90 hover:bg-amber-200/80 text-amber-950 border border-amber-300 font-bold text-sm sm:text-base shadow-xs transition-colors"
             >
               <span>{t("common.start_learning")}</span>
-              <ArrowIcon className="w-4 h-4" />
             </Link>
             <Link
               to="/readers"

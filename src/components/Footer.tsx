@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BookOpen, Heart, ShieldCheck } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext.js";
+import { GlobalVisitCounter } from "./GlobalVisitCounter.js";
 
 export const Footer: React.FC = () => {
   const { t } = useLanguage();
@@ -66,6 +67,16 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
+                <Link to="/about" className="hover:text-amber-800 transition-colors font-semibold text-amber-900">
+                  دليل المنصة والتعريف بالمشروع
+                </Link>
+              </li>
+              <li>
+                <Link to="/glossary" className="hover:text-amber-800 transition-colors">
+                  معجم المصطلحات العلمية
+                </Link>
+              </li>
+              <li>
                 <Link to="/qasida" className="hover:text-amber-800 transition-colors">
                   القصيدة الحسناء في الأوجه المقدمة
                 </Link>
@@ -111,16 +122,31 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
             </ul>
+
+            {/* Visit Counter */}
+            <div className="mt-6 pt-4 border-t border-[#ebdcc8]">
+              <GlobalVisitCounter />
+            </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-[#e6dcce] flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-3">
-          <p>
-            جميع الحقوق العلمية محفوظة لورثة الشيخ علي بن محمد توفيق النحاس رحمه الله ونفع بعلمه.
-          </p>
-          <div className="flex items-center gap-1 text-stone-400">
-            <span>طبقة بيانات نقية موثقة علمياً</span>
+        <div className="mt-10 pt-6 border-t border-[#e6dcce] flex flex-col md:flex-row items-center justify-between text-xs text-stone-600 gap-4">
+          <div className="space-y-1 text-center md:text-right">
+            <p className="font-semibold text-stone-800">
+              إعداد وتحقيق: <span className="text-amber-900 font-bold">صلاح الدين أحمد أبو سليمان</span> (Salah Eddine Ahmed Abousoulymane)
+            </p>
+            <p className="text-stone-500">
+              جميع الحقوق العلمية والمنهجية محفوظة لورثة الشيخ علي بن محمد توفيق النحاس رحمه الله.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-stone-500 text-center">
+            <span>© 2026 <strong>novaskilltech</strong>. جميع الحقوق محفوظة.</span>
+            <span className="hidden sm:inline text-stone-300">•</span>
+            <span className="text-[11px] px-2 py-0.5 rounded bg-amber-100/60 text-amber-900 font-medium">
+              طبقة بيانات نقية موثقة علمياً
+            </span>
           </div>
         </div>
       </div>

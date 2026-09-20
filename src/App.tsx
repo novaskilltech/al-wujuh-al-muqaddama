@@ -25,6 +25,7 @@ import { RisalaPage } from "./pages/RisalaPage.js";
 import { SheikhPage } from "./pages/SheikhPage.js";
 import { VerificationPage } from "./pages/VerificationPage.js";
 import { GlossaryPage } from "./pages/GlossaryPage.js";
+import { AboutPage } from "./pages/AboutPage.js";
 
 export const App: React.FC = () => {
   return (
@@ -65,6 +66,7 @@ export const App: React.FC = () => {
                 <Route path="/qasida" element={<QasidaPage />} />
                 <Route path="/risala" element={<RisalaPage />} />
                 <Route path="/glossary" element={<GlossaryPage />} />
+                <Route path="/about" element={<AboutPage />} />
                 <Route path="/sheikh-an-nahhas" element={<SheikhPage />} />
                 <Route path="/verification" element={<VerificationPage />} />
                 
